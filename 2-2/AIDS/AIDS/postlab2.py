@@ -1,8 +1,0 @@
-name = str(input("Hi\nPlease enter your name\n"))
-print("Greetings ",name)
-print("I am Here to add the two integer numbers provided by you.....")
-a=int(input("Please Enter your First number\n"))
-b=int(input("Please enter the Second number\n"))
-c=int(a+b)
-print("The sum of two numbers is ",c)
-print("Thank you... ")
