@@ -1,0 +1,47 @@
+{% extends 'home.html' %}
+{% block body %}
+<div class="bg-image"
+     style="background-image: url('https://lh3.googleusercontent.com/5WvKho7g869Jdf1UXdc20rDOpQky4jVsvKLe0989SonVQjeaAQS60JPY4MUCva0OonNou4w1PPMIBpEzvYJPzebvldwlhfMfc9sekXtUr3RZLPAbxlW6oCMUZxELZy8yriElAWs7it3sGvr4xIPPaIAMP0eWdmsszRMFr7MDcdvlq0jaiSE4z7fAMPW2b-MzJTHUt7Va_-u4LndDnsAUvtdUNrqV1LYV_XLLL_3eDNQYSmJIGnKgbv9boQhtCpUCVmLhNplfionnD0fJMQHU1XO8UKz9Gxhk7sq1MMQCSWIlbG3Tp_-WDbr8OOjz5oCFkw-Lb35p0BtcG4UTPJsRGYyQ4Kw3kMrEp-1ZrYA_tgmIjpg6NrL6RTQ27AC5MFFz9YWBWH8P2mg-N_zSx9vJ3aXQAK06puG_0Enbk85iKs3hlZ4ghxuCBJrfufkajdiMHX5sfZscMHQM4N-yLwcRxJCua5f-3PkapV9pLf-Ci5jo2z3ca5ok5LUxmT8rtJz0fpvjTafgsgVIZfn4wOAY4TZFR4dM2RvpL9tJgFSRNfbr0FZz3buRW-Op4h9axJkeKJusNljEHYlzTxXM6G5Gf2M97k4GK1jNLjeHCT7-P7W7GCPkjQdLuvV_XfwmIEGD0R9EVbAfn0hcMPjBwTwgF3aYk4kTSwnSGPSDqerlAN4Qdhqqp2ivhjKPC-RO1UW3T_sJbBaJTyrQMWvYD970BsqUZ141G1F7UmM-XmkfA4Y46g097Md7Fhd91H4AxGWykOQxhA-m2Ol8VaBbZMKh6fXnfm8c75oW3sBYQygkWPDIRlmVF1hFuhj-BtMMCDfOaqzuETOLYs9ovaE-uq63yib4G--DqKaaaEN5lWeC1R2AgTF1T9SETxepIzvcSmWP7j2JYQImSy1NSveYOkXxTUmKfzx6EnE66XPhAh00rWKTQZt0Kwxq-b1ftKKlqlVyBpgMXOa-rwVrznVULuNrwQD-4xuPDO8LtLjtg58ZBqfpBFvSd5l2_m5TJ2g5mdkEw69HWVbAVG5aclf_UkhB8rbTacp5fjI__baSp0VjbtZib5enlFRFjA=w647-h474-no?authuser=0');
+            height: 100vh">
+        <div class="container-fluid vh-100 ">
+                <div class="rounded d-flex justify-content-center">
+                    <div class="col-md-4 col-sm-12 shadow-lg p-5 bg-light">
+                        <div class="text-center">
+                            <h3 class="text-secondary">Create Account</h3>
+                        </div>
+                        <div class="p-2">
+                            <form action="">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text bg-secondary"><i
+                                            class="bi bi-person-plus-fill text-white"></i></span>
+                                    <input type="text" class="form-control" placeholder="Username">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text bg-secondary"><i
+                                            class="bi bi-envelope text-white"></i></span>
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text bg-secondary"><i
+                                            class="bi bi-key-fill text-white"></i></span>
+                                    <input type="password" class="form-control" placeholder="password">
+                                </div>
+                                <div class="d-grid col-12 mx-auto">
+                                    <button class="btn btn-secondary" type="button"><span></span> Sign up</button>
+                                </div>
+                                <p class="text-center mt-3">
+                                    <a href="{% url 'home' %}" class="text-primary fw-bold"><span class="text-primary"></span></a>
+
+                                </p>
+                                <p class="text-center mt-3">Already have an account?
+                                    <a href="/login" class="text-primary fw-bold"><span class=" text-primary">Sign in</span></a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
