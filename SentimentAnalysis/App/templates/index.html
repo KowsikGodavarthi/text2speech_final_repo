@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+
+</head>
+<body>
+<h1> Sentiment Analysis </h1>
+    <form id="sentiment-form" action="/predict" method="post">
+        <label for="sentence">Enter a sentence:</label>
+        <input type="text" id="sentence" name="text">
+        <button type="submit">Predict</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById("sentiment-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            predictSentiment();
+        });
+
+        function predictSentiment() {
+            var sentence = document.getElementById("sentence").value;
+            fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ text: sentence })
+            })
+            .then(response => response.json())
+            .then(data => {
+                var resultDiv = document.getElementById("result");
+                resultDiv.innerHTML = "<p>Predicted sentiment: " + data.sentiment + "</p>";
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
